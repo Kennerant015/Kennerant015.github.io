@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor</title>
+    <style>
+        body {
+            background-color: #f8a9bd;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            display: none; /* Ocultar en pantallas grandes */
+        }
+        @media only screen and (max-width: 768px) {
+            body {
+                display: block; /* Mostrar solo en pantallas pequeñas */
+            }
+            .card {
+                background: white;
+                border-radius: 15px;
+                padding: 25px;
+                width: 80%;
+                max-width: 500px;
+                margin: auto;
+                box-shadow: 0px 0px 10px rgba(219, 60, 60, 0.56);
+                position: relative;
+            }
+            h1 {
+                color: #ff4d79;
+            }
+            .btn {
+                background: #ff4d79;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                margin: 10px;
+            }
+            .btn:hover {
+                background: #ff2a5d;
+            }
+            .hearts {
+                position:absolute;
+                width: 20px;
+                height: 20px;
+                background: red;
+                clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 50% 75%, 20% 100%, 0% 40%);
+                opacity: 0;
+                animation: float 2s ease-in-out forwards;
+            }
+            @keyframes float {
+                0% {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100px);
+                    opacity: 0;
+                }
+            }
+            /* Estilo para las imágenes */
+            .header-image, .bottom-image, .inside-card-image {
+                width: none;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagen de encabezado horizontal -->
+    <img width= "480" height= "180" src="image/encabezado kitty1- file.png" alt="Encabezado"class="header-image">
+
+    <div class="card">
+        <!-- Imagen dentro de la carta -->
+        <img width= "350" height= "100" src="image/encabezado2.png" alt="Hello Kitty" class="inside-card-image">
+        
+        <h1>FELIZ CUMPLEAÑOS,MI AMOR</h1>
+        <p>Hoy es un día muy especial porque celebramos tu pumpeaños, mi persona favorita en el mundo. Eres hermosa, increíble y la luz de mi vida. Te amo con todo mi corazón.</p>
+        <p>Espero que este dia sea de mucha felicidad y sobre todo recordarte que siempre estoy para ti y seras el amor de mi vida.</p>
+        <p>Espero que haya sido de tu agrado esta cartita digital que prepare para ti, ya que esta significa lo importante y valiosa que eres para mi.
+            <p>TE AMO MUCHO</p>
+            <P>Ana isabel piedra jimenez</P>
+            <p>atentamente: Kenner Téllez</p>
+        </p>
+        <img width="220" height= "220" src="image/hello kitty1.png" alt="Imagen abajo" class="bottom-image">
+        <button class="btn" onclick="showHearts()">Haz clic para tu sorpresa</button>
+        <button class="btn" onclick="window.open('https://open.spotify.com/playlist/77qP5pzSBAgsrR6PyDqmAM?si=4233bfea7926452c&pt=bca26d834f85493aaf9cac1539846610', '_black')">Escuchar cancion.</button>
+
+    </div>
+
+    
+    <script>
+        function showHearts() {
+            for (let i = 0; i < 5; i++) {
+                let heart = document.createElement("div");
+                heart.className = "hearts";
+                heart.style.left = Math.random() * 100 + "%";
+                heart.style.top = "50%";
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 1500);
+            }
+        }
+    </script>
+</body>
+</html>

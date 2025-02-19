@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia</title>
+    <style>
+        body {
+            background-color: #ffe4ec;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.4);
+            position: relative;
+        }
+
+        h1 {
+            color: #ff4d79;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 350px;
+            margin: 20px auto;
+        }
+
+        .event {
+            position: relative;
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0px 4px 8px rgba(255, 105, 180, 0.4);
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .event p {
+            margin: 5px 0;
+        }
+
+        .heart {
+            position:static;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: #ff4d79;
+            clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 50% 75%, 20% 100%, 0% 40%);
+        }
+
+        .btn {
+            background: #ff4d79;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 8px rgba(255, 105, 180, 0.4);
+        }
+
+        .btn:hover {
+            background: #ff2a5d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Nuestra Historia 💕</h1>
+        <div class="timeline">
+            <div class="event show">
+                <div class="heart"></div>
+                <p><strong>📅 Primer mensaje</strong></p>
+                <p>Desde que comenzamos a hablar, supe que me enamoraria de ti.</p>
+            </div>
+
+            <div class="event show">
+                <div class="heart"></div>
+                <p><strong>💬 Conversaciones inolvidables</strong></p>
+                <p>Cada día nos conociamos más, hablamos de todo nuestros planes y promesas a futuro que son la base de toda nuestra relacion...</p>
+            </div>
+
+            <div class="event show">
+                <div class="heart"></div>
+                <p><strong>🎶 Nuestra canción</strong></p>
+                <p>Hay una canción que nos recuerda lo especial que es nuestra conexión.</p>
+            </div>
+
+            <div class="event show">
+                <div class="heart"></div>
+                <p><strong>💖 Te amo mucho</strong></p>
+                <p>El amor que siento por ti sobrepasa fronteras y miles de kilometros.</p>
+            </div>
+        </div>
+
+        <button class="btn" onclick="window.location.href='index4.html'">Siguiente</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum de Recuerdos</title>
+    <style>
+        body {
+            background-color: #ffe4ec;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            background: white;
+            border-radius: 25px;
+            padding: 80px;
+            height: 200px;
+            width: 400px;
+            box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #ff4d79;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel img {
+            width: 100%;
+            display: none;
+            border-radius: 10px;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .btn {
+            background: #ff4d79;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0px 4px 8px rgba(255, 105, 180, 0.4);
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff2a5d;
+            transform: scale(1.1);
+            box-shadow: 0px 6px 12px rgba(255, 105, 180, 0.6);
+        }
+
+        .next-btn {
+            margin-top: 20px;
+        }
+
+        .hello-kitty {
+            width: 120px;
+            position: absolute;
+            top: -50px;
+            right: -40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Álbum de Recuerdos 📸</h1>
+        <div class="carousel">
+            <img src="imagen1.jpg" class="active" alt="Recuerdo 1">
+            <img src="imagen2.jpg" alt="Recuerdo 2">
+            <img src="imagen3.jpg" alt="Recuerdo 3">
+        </div>
+
+        <div class="controls">
+            <button class="btn" onclick="prevImage()">◀️</button>
+            <button class="btn" onclick="nextImage()">▶️</button>
+        </div>
+
+        <button class="btn next-btn" onclick="window.location.href='index5.html'">Siguiente</button>
+
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll(".carousel img");
+
+        function showImage(index) {
+            images.forEach(img => img.classList.remove("active"));
+            images[index].classList.add("active");
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+    </script>
+
+</body>
+</html>

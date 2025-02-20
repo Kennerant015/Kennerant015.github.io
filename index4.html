@@ -36,7 +36,6 @@
         .carousel {
             position: relative;
             width: 100%;
-            max-width: 300px;
             overflow: hidden;
             border-radius: 25px;
             text-aling: center;
@@ -46,7 +45,6 @@
             width: 50%;
             display: none;
             border-radius: 20px;
-            margin: 0 auto;
             display: block;
         }
 
@@ -119,9 +117,9 @@
         let currentIndex = 0;
         const images = document.querySelectorAll(".carousel img");
 
-        function showImage(index) {
+        function showImage(i) {
             images.forEach(img => img.classList.remove("active"));
-            images[index].classList.add("active");
+            images[i].classList.add("active");
         }
 
         function nextImage() {

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Sueños Juntos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #ff4d79;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 2.5em;
+        }
+        .dreams {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background: white;
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 400px;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: scale(1);
+        }
+        .dream-image {
+            display: none;
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn {
+            background: #ff4d79;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1.2em;
+            transition: background 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background: #ff2a5d;
+        }
+        p{color: black;}
+
+        .viajar{height: 80px;
+        width: 100px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nuestros Sueños Juntos</h1>
+        <p>Estos son algunos de los sueños que queremos cumplir juntos. Cada uno nos acerca más a nuestro futuro.</p>
+        
+        <div class="dreams">
+            <div class="card" onclick="showImage('viajar')">🌍 Viajar juntos a un lugar especial</div>
+            <div class="card" onclick="showImage('hogar')">🏡 Construir un hogar lleno de amor</div>
+            <div class="card" onclick="showImage('boda')">💍 Casarnos y tener nuestra boda soñada</div>
+            <div class="card" onclick="showImage('mascota')">🐶 Adoptar una mascota y cuidarla juntos</div>
+            <div class="card" onclick="showImage('bailar')">🎶 Bailar nuestra canción favorita bajo las estrellas</div>
+        </div>
+        
+        <img id="dreamImage" class="dream-image" src="" alt="Imagen del sueño">
+        
+        <button class="btn" onclick="window.location.href='index4.html'">Hagámoslo realidad</button>
+    </div>
+
+    <script>
+        function showImage(dream) {
+            const images = {
+                viajar: 'viaje.jpg',
+                hogar: 'familia2.jpg',
+                boda: 'boda.jpg',
+                mascota: 'mascota.jpg',
+                bailar: 'juntos.jpg'
+            };
+            document.getElementById('dreamImage').src = images[dream];
+            document.getElementById('dreamImage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
